@@ -1,0 +1,13 @@
+services:
+  database:
+    image: mysql:8.0
+    ports:
+      - "127.0.0.1:3308:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${HUMANEYECUE_DB_ROOT_PASSWORD:?Set a local database password}
+    volumes:
+      # Original setup used a host directory. Example: C:/path/to/Database
+      - type: bind
+        source: ${HUMANEYECUE_DB_DATA_PATH:?Set an absolute path to your database directory}
+        target: /var/lib/mysql
+      - ./sql_schema/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro

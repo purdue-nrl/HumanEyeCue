@@ -1,0 +1,11 @@
+# Versions recovered from the source environment; CUDA PyTorch is installed separately.
+# VideoChat2 uses its own environment: video_chat2/requirements.txt.
+-r ../requirements.txt
+transformers==4.56.1
+peft==0.17.1
+lightning==2.5.5
+accelerate>=1.0,<2
+bitsandbytes>=0.43,<1
+av>=12,<16
+sentencepiece==0.2.1
+# Gaze filtering additionally needs the authors' custom Transformers patch.

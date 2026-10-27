@@ -1,0 +1,13 @@
+{
+  "sql_url": "127.0.0.1",
+  "sql_user": "root",
+  "sql_user_root": "root",
+  "sql_port": 3308,
+  "full_screen": true,
+  "video_gap": 3,
+  "warn_at_demo_end": true,
+  "root_path": "./sessions/",
+  "question_root_path": "../data/clevrer/",
+  "export_database_dev": "EYE_TRACK_DB",
+  "export_database_prod": "EYE_TRACK_DB"
+}

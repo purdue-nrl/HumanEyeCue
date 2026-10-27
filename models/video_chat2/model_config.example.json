@@ -1,0 +1,6 @@
+{
+  "vit_blip_model_path": "../../checkpoints/videochat2/umt_l16_qformer.pth",
+  "llama_model_path": "../../checkpoints/vicuna-7b-v0",
+  "videochat2_model_path": "../../checkpoints/videochat2/videochat2_7b_stage3.pth",
+  "bert_model_path": "../../checkpoints/bert-base-uncased"
+}

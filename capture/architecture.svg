@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1623pt" height="1445pt" viewBox="0.00 0.00 1623.00 1445.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(21.6 1423.42)">
+<title>HumanEyeCueCapture</title>
+<polygon fill="white" stroke="none" points="-21.6,21.6 -21.6,-1423.42 1601.85,-1423.42 1601.85,21.6 -21.6,21.6" />
+<text xml:space="preserve" text-anchor="middle" x="790.13" y="-1376.22" font-family="Arial" font-size="24.00">HumanEyeCue | Capture flow and data interactions</text>
+<g id="clust1" class="cluster">
+<title>cluster_private_users</title>
+<path fill="#fff7f7" stroke="#c99b9b" stroke-width="1.5" d="M1185.64,-1175.47C1185.64,-1175.47 1439.64,-1175.47 1439.64,-1175.47 1445.64,-1175.47 1451.64,-1181.47 1451.64,-1187.47 1451.64,-1187.47 1451.64,-1345.02 1451.64,-1345.02 1451.64,-1351.02 1445.64,-1357.02 1439.64,-1357.02 1439.64,-1357.02 1185.64,-1357.02 1185.64,-1357.02 1179.64,-1357.02 1173.64,-1351.02 1173.64,-1345.02 1173.64,-1345.02 1173.64,-1187.47 1173.64,-1187.47 1173.64,-1181.47 1179.64,-1175.47 1185.64,-1175.47" />
+<text xml:space="preserve" text-anchor="middle" x="1312.64" y="-1340.42" font-family="Arial" font-size="14.00" fill="#854b4b">Kept private (PII data)</text>
+<text xml:space="preserve" text-anchor="middle" x="1312.64" y="-1323.62" font-family="Arial" font-size="14.00" fill="#854b4b">Not included in the released dataset</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_app</title>
+<path fill="white" stroke="#c3d3c9" d="M83.64,-8C83.64,-8 1153.64,-8 1153.64,-8 1159.64,-8 1165.64,-14 1165.64,-20 1165.64,-20 1165.64,-1342.65 1165.64,-1342.65 1165.64,-1348.65 1159.64,-1354.65 1153.64,-1354.65 1153.64,-1354.65 83.64,-1354.65 83.64,-1354.65 77.64,-1354.65 71.64,-1348.65 71.64,-1342.65 71.64,-1342.65 71.64,-20 71.64,-20 71.64,-14 77.64,-8 83.64,-8" />
+<text xml:space="preserve" text-anchor="middle" x="618.64" y="-1334.45" font-family="Arial" font-size="18.00">Capture application</text>
+</g>
+
+<g id="node1" class="node">
+<title>auth</title>
+<polygon fill="#e1eee5" stroke="#9bb5a5" stroke-width="2" points="303.64,-1303.05 125.6,-1245.45 303.64,-1187.85 481.69,-1245.45 303.64,-1303.05" />
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-1249.95" font-family="Arial" font-size="15.00">1. Start</text>
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-1231.95" font-family="Arial" font-size="15.00">Is the user registered?</text>
+</g>
+
+<g id="node2" class="node">
+<title>demos</title>
+<path fill="#f0f5f1" stroke="#9bb5a5" stroke-width="2" d="M441.94,-1115.85C441.94,-1115.85 165.35,-1115.85 165.35,-1115.85 159.35,-1115.85 153.35,-1109.85 153.35,-1103.85 153.35,-1103.85 153.35,-1052.25 153.35,-1052.25 153.35,-1046.25 159.35,-1040.25 165.35,-1040.25 165.35,-1040.25 441.94,-1040.25 441.94,-1040.25 447.94,-1040.25 453.94,-1046.25 453.94,-1052.25 453.94,-1052.25 453.94,-1103.85 453.94,-1103.85 453.94,-1109.85 447.94,-1115.85 441.94,-1115.85" />
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-1091.55" font-family="Arial" font-size="15.00">2. Familiarize the user</text>
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-1073.55" font-family="Arial" font-size="15.00">Three demo question-video-answer trials</text>
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-1055.55" font-family="Arial" font-size="15.00">Confirm ready to start</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>auth-&gt;demos</title>
+<path fill="none" stroke="#3e5e4d" stroke-width="2" d="M303.640,-1187.850C303.640,-1186.900 303.640,-1122.850 303.640,-1122.850" />
+<polygon fill="#3e5e4d" stroke="#3e5e4d" stroke-width="2" points="306.090,-1122.850 303.640,-1115.850 301.190,-1122.850 306.090,-1122.850" />
+<text xml:space="preserve" text-anchor="start" x="278.53" y="-1166.98" font-family="Arial" font-size="11.00" fill="#3e5e4d">yes</text>
+</g>
+
+<g id="node14" class="node">
+<title>blocked</title>
+<path fill="#f8eeee" stroke="#d4b7b7" stroke-width="2" d="M776.75,-1274.25C776.75,-1274.25 608.54,-1274.25 608.54,-1274.25 602.54,-1274.25 596.54,-1268.25 596.54,-1262.25 596.54,-1262.25 596.54,-1228.65 596.54,-1228.65 596.54,-1222.65 602.54,-1216.65 608.54,-1216.65 608.54,-1216.65 776.75,-1216.65 776.75,-1216.65 782.75,-1216.65 788.75,-1222.65 788.75,-1228.65 788.75,-1228.65 788.75,-1262.25 788.75,-1262.25 788.75,-1268.25 782.75,-1274.25 776.75,-1274.25" />
+<text xml:space="preserve" text-anchor="middle" x="692.64" y="-1249.95" font-family="Arial" font-size="15.00">Stay on welcome screen</text>
+<text xml:space="preserve" text-anchor="middle" x="692.64" y="-1231.95" font-family="Arial" font-size="15.00">Registration required</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>auth-&gt;blocked</title>
+<path fill="none" stroke="#3e5e4d" stroke-width="2" d="M480.299,-1245.000C483.340,-1245.000 589.540,-1245.000 589.540,-1245.000" />
+<polygon fill="#3e5e4d" stroke="#3e5e4d" stroke-width="2" points="589.540,-1247.450 596.540,-1245.000 589.540,-1242.550 589.540,-1247.450" />
+<text xml:space="preserve" text-anchor="start" x="514.26" y="-1255.2" font-family="Arial" font-size="11.00" fill="#3e5e4d">no</text>
+</g>
+
+<g id="node3" class="node">
+<title>schedule</title>
+<path fill="#e1eee5" stroke="#9bb5a5" stroke-width="2" d="M447.39,-963.07C447.39,-963.07 159.9,-963.07 159.9,-963.07 153.9,-963.07 147.9,-957.07 147.9,-951.07 147.9,-951.07 147.9,-881.48 147.9,-881.48 147.9,-875.48 153.9,-869.48 159.9,-869.48 159.9,-869.48 447.39,-869.48 447.39,-869.48 453.39,-869.48 459.39,-875.48 459.39,-881.48 459.39,-881.48 459.39,-951.07 459.39,-951.07 459.39,-957.07 453.39,-963.07 447.39,-963.07" />
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-938.77" font-family="Arial" font-size="15.00">3. Scheduling / next question</text>
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-920.77" font-family="Arial" font-size="15.00">Prioritize least-answered questions</text>
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-902.77" font-family="Arial" font-size="15.00">Exclude this user's answered pairs</text>
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-884.77" font-family="Arial" font-size="15.00">Respect spacing between repeated videos</text>
+</g>
+
+<g id="edge3" class="edge">
+<title>demos-&gt;schedule</title>
+<path fill="none" stroke="#3e5e4d" stroke-width="2" d="M303.640,-1040.250C303.640,-1039.300 303.640,-970.070 303.640,-970.070" />
+<polygon fill="#3e5e4d" stroke="#3e5e4d" stroke-width="2" points="306.090,-970.070 303.640,-963.070 301.190,-970.070 306.090,-970.070" />
+<text xml:space="preserve" text-anchor="start" x="221.07" y="-1016.84" font-family="Arial" font-size="11.00" fill="#3e5e4d">start main trials</text>
+</g>
+
+<g id="node4" class="node">
+<title>question</title>
+<path fill="#f0f5f1" stroke="#9bb5a5" stroke-width="2" d="M420.69,-792.3C420.69,-792.3 186.6,-792.3 186.6,-792.3 180.6,-792.3 174.6,-786.3 174.6,-780.3 174.6,-780.3 174.6,-728.7 174.6,-728.7 174.6,-722.7 180.6,-716.7 186.6,-716.7 186.6,-716.7 420.69,-716.7 420.69,-716.7 426.69,-716.7 432.69,-722.7 432.69,-728.7 432.69,-728.7 432.69,-780.3 432.69,-780.3 432.69,-786.3 426.69,-792.3 420.69,-792.3" />
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-768" font-family="Arial" font-size="15.00">4. Present question</text>
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-750" font-family="Arial" font-size="15.00">Show prompt + answer choices</text>
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-732" font-family="Arial" font-size="15.00">Record question-phase start / stop</text>
+</g>
+
+<g id="edge4" class="edge">
+<title>schedule-&gt;question</title>
+<path fill="none" stroke="#3e5e4d" stroke-width="2" d="M303.640,-869.480C303.640,-868.610 303.640,-799.300 303.640,-799.300" />
+<polygon fill="#3e5e4d" stroke="#3e5e4d" stroke-width="2" points="306.090,-799.300 303.640,-792.300 301.190,-799.300 306.090,-799.300" />
+</g>
+
+<g id="node5" class="node">
+<title>video</title>
+<path fill="#f0f5f1" stroke="#9bb5a5" stroke-width="2" d="M451.13,-644.7C451.13,-644.7 156.16,-644.7 156.16,-644.7 150.16,-644.7 144.16,-638.7 144.16,-632.7 144.16,-632.7 144.16,-581.1 144.16,-581.1 144.16,-575.1 150.16,-569.1 156.16,-569.1 156.16,-569.1 451.13,-569.1 451.13,-569.1 457.13,-569.1 463.13,-575.1 463.13,-581.1 463.13,-581.1 463.13,-632.7 463.13,-632.7 463.13,-638.7 457.13,-644.7 451.13,-644.7" />
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-620.4" font-family="Arial" font-size="15.00">5. Play video once</text>
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-602.4" font-family="Arial" font-size="15.00">Record video-phase start / stop</text>
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-584.4" font-family="Arial" font-size="15.00">Advance automatically when playback ends</text>
+</g>
+
+<g id="edge5" class="edge">
+<title>question-&gt;video</title>
+<path fill="none" stroke="#3e5e4d" stroke-width="2" d="M303.640,-716.700C303.640,-715.720 303.640,-651.700 303.640,-651.700" />
+<polygon fill="#3e5e4d" stroke="#3e5e4d" stroke-width="2" points="306.090,-651.700 303.640,-644.700 301.190,-651.700 306.090,-651.700" />
+<text xml:space="preserve" text-anchor="start" x="273.03" y="-695.91" font-family="Arial" font-size="11.00" fill="#3e5e4d">Next</text>
+</g>
+
+<g id="node6" class="node">
+<title>response</title>
+<path fill="#f0f5f1" stroke="#9bb5a5" stroke-width="2" d="M454.67,-470.55C454.67,-470.55 152.62,-470.55 152.62,-470.55 146.62,-470.55 140.62,-464.55 140.62,-458.55 140.62,-458.55 140.62,-406.95 140.62,-406.95 140.62,-400.95 146.62,-394.95 152.62,-394.95 152.62,-394.95 454.67,-394.95 454.67,-394.95 460.67,-394.95 466.67,-400.95 466.67,-406.95 466.67,-406.95 466.67,-458.55 466.67,-458.55 466.67,-464.55 460.67,-470.55 454.67,-470.55" />
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-446.25" font-family="Arial" font-size="15.00">6. Collect and save response</text>
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-428.25" font-family="Arial" font-size="15.00">Save answer + question/video/answer timing</text>
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-410.25" font-family="Arial" font-size="15.00">Increment global question response count</text>
+</g>
+
+<g id="edge6" class="edge">
+<title>video-&gt;response</title>
+<path fill="none" stroke="#3e5e4d" stroke-width="2" d="M303.640,-569.100C303.640,-568.250 303.640,-477.550 303.640,-477.550" />
+<polygon fill="#3e5e4d" stroke="#3e5e4d" stroke-width="2" points="306.090,-477.550 303.640,-470.550 301.190,-477.550 306.090,-477.550" />
+<text xml:space="preserve" text-anchor="start" x="225.32" y="-534.98" font-family="Arial" font-size="11.00" fill="#3e5e4d">playback ends</text>
+</g>
+
+<g id="node12" class="node">
+<title>tracker</title>
+<path fill="#fff5de" stroke="#cbb176" stroke-width="2" d="M1490.43,-644.7C1490.43,-644.7 1288.86,-644.7 1288.86,-644.7 1282.86,-644.7 1276.86,-638.7 1276.86,-632.7 1276.86,-632.7 1276.86,-581.1 1276.86,-581.1 1276.86,-575.1 1282.86,-569.1 1288.86,-569.1 1288.86,-569.1 1490.43,-569.1 1490.43,-569.1 1496.43,-569.1 1502.43,-575.1 1502.43,-581.1 1502.43,-581.1 1502.43,-632.7 1502.43,-632.7 1502.43,-638.7 1496.43,-644.7 1490.43,-644.7" />
+<text xml:space="preserve" text-anchor="middle" x="1389.64" y="-620.4" font-family="Arial" font-size="15.00">Eye tracker / Gazepoint</text>
+<text xml:space="preserve" text-anchor="middle" x="1389.64" y="-602.4" font-family="Arial" font-size="15.00">Records gaze during viewing</text>
+<text xml:space="preserve" text-anchor="middle" x="1389.64" y="-584.4" font-family="Arial" font-size="15.00">Separate import into gaze DB</text>
+</g>
+
+<g id="edge20" class="edge">
+<title>video-&gt;tracker</title>
+<path fill="none" stroke="#6a8bad" stroke-width="2" stroke-dasharray="5,2" d="M463.130,-594.000C463.890,-594.000 1269.860,-594.000 1269.860,-594.000" />
+<polygon fill="#6a8bad" stroke="#6a8bad" stroke-width="2" points="1269.860,-596.450 1276.860,-594.000 1269.860,-591.550 1269.860,-596.450" />
+<text xml:space="preserve" text-anchor="middle" x="818.22" y="-597.3" font-family="Arial" font-size="11.00" fill="#4b6e92">phase-sync signals</text>
+</g>
+
+<g id="node7" class="node">
+<title>finished</title>
+<polygon fill="#e1eee5" stroke="#9bb5a5" stroke-width="2" points="303.64,-296.4 93.92,-238.8 303.64,-181.2 513.37,-238.8 303.64,-296.4" />
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-243.3" font-family="Arial" font-size="15.00">Session limit / user ends</text>
+<text xml:space="preserve" text-anchor="middle" x="303.64" y="-225.3" font-family="Arial" font-size="15.00">OR question limit reached?</text>
+</g>
+
+<g id="edge7" class="edge">
+<title>response-&gt;finished</title>
+<path fill="none" stroke="#3e5e4d" stroke-width="2" d="M303.640,-394.950C303.640,-393.970 303.640,-303.400 303.640,-303.400" />
+<polygon fill="#3e5e4d" stroke="#3e5e4d" stroke-width="2" points="306.090,-303.400 303.640,-296.400 301.190,-303.400 306.090,-303.400" />
+<text xml:space="preserve" text-anchor="start" x="175.8" y="-360.9" font-family="Arial" font-size="11.00" fill="#3e5e4d">Next / Pause and submit</text>
+</g>
+
+<g id="node11" class="node">
+<title>questions</title>
+<path fill="#e8f0fa" stroke="#9eb6cf" stroke-width="2" d="M1474.08,-958.8C1474.08,-964.01 1409.79,-968.25 1330.64,-968.25 1251.5,-968.25 1187.21,-964.01 1187.21,-958.8 1187.21,-958.8 1187.21,-873.75 1187.21,-873.75 1187.21,-868.54 1251.5,-864.3 1330.64,-864.3 1409.79,-864.3 1474.08,-868.54 1474.08,-873.75 1474.08,-873.75 1474.08,-958.8 1474.08,-958.8" />
+<path fill="none" stroke="#9eb6cf" stroke-width="2" d="M1474.08,-958.8C1474.08,-953.59 1409.79,-949.35 1330.64,-949.35 1251.5,-949.35 1187.21,-953.59 1187.21,-958.8" />
+<text xml:space="preserve" text-anchor="middle" x="1330.64" y="-929.77" font-family="Arial" font-size="15.00">Question DB / response pool</text>
+<text xml:space="preserve" text-anchor="middle" x="1330.64" y="-911.77" font-family="Arial" font-size="15.00">VQDB.VQ_DATA</text>
+<text xml:space="preserve" text-anchor="middle" x="1330.64" y="-893.77" font-family="Arial" font-size="15.00">Question IDs + global response counts</text>
+</g>
+
+<g id="edge22" class="edge">
+<title>response-&gt;questions</title>
+<path fill="none" stroke="#6a8bad" stroke-width="2" stroke-dasharray="5,2" d="M466.670,-445.000C724.800,-445.000 1194.380,-445.000 1194.380,-445.000C1194.380,-445.000 1194.380,-863.797 1194.380,-863.797" />
+<polygon fill="#6a8bad" stroke="#6a8bad" stroke-width="2" points="1191.930,-863.797 1194.380,-870.797 1196.830,-863.797 1191.930,-863.797" />
+<text xml:space="preserve" text-anchor="middle" x="967.01" y="-448.3" font-family="Arial" font-size="11.00" fill="#4b6e92">update num_responses += 1</text>
+</g>
+
+<g id="node13" class="node">
+<title>gaze</title>
+<path fill="#e8f0fa" stroke="#9eb6cf" stroke-width="2" d="M1551.74,-485.4C1551.74,-491.86 1473.26,-497.1 1376.64,-497.1 1280.03,-497.1 1201.55,-491.86 1201.55,-485.4 1201.55,-485.4 1201.55,-380.1 1201.55,-380.1 1201.55,-373.64 1280.03,-368.4 1376.64,-368.4 1473.26,-368.4 1551.74,-373.64 1551.74,-380.1 1551.74,-380.1 1551.74,-485.4 1551.74,-485.4" />
+<path fill="none" stroke="#9eb6cf" stroke-width="2" d="M1551.74,-485.4C1551.74,-478.94 1473.26,-473.7 1376.64,-473.7 1280.03,-473.7 1201.55,-478.94 1201.55,-485.4" />
+<text xml:space="preserve" text-anchor="middle" x="1376.64" y="-455.25" font-family="Arial" font-size="15.00">Gaze / session DB</text>
+<text xml:space="preserve" text-anchor="middle" x="1376.64" y="-437.25" font-family="Arial" font-size="15.00">EYE_TRACK_DB</text>
+<text xml:space="preserve" text-anchor="middle" x="1376.64" y="-419.25" font-family="Arial" font-size="15.00">QVA_SESSION_DATA: answers + phase timing</text>
+<text xml:space="preserve" text-anchor="middle" x="1376.64" y="-401.25" font-family="Arial" font-size="15.00">EYE_TRACKING_DATA: imported gaze</text>
+</g>
+
+<g id="edge21" class="edge">
+<title>response-&gt;gaze</title>
+<path fill="none" stroke="#6a8bad" stroke-width="2" stroke-dasharray="5,2" d="M466.670,-420.000C467.480,-420.000 1194.550,-420.000 1194.550,-420.000" />
+<polygon fill="#6a8bad" stroke="#6a8bad" stroke-width="2" points="1194.550,-422.450 1201.550,-420.000 1194.550,-417.550 1194.550,-422.450" />
+<text xml:space="preserve" text-anchor="middle" x="741.87" y="-423.3" font-family="Arial" font-size="11.00" fill="#4b6e92">save response + phase times / ticks</text>
+</g>
+
+<g id="node8" class="node">
+<title>pause_choice</title>
+<polygon fill="#e1eee5" stroke="#9bb5a5" stroke-width="2" points="244.64,-109.2 94.08,-69.6 244.64,-30 395.2,-69.6 244.64,-109.2" />
+<text xml:space="preserve" text-anchor="middle" x="244.64" y="-65.1" font-family="Arial" font-size="15.00">Pause requested?</text>
+</g>
+
+<g id="edge9" class="edge">
+<title>finished-&gt;pause_choice</title>
+<path fill="none" stroke="#3e5e4d" stroke-width="2" d="M244.640,-197.404C244.640,-196.540 244.640,-116.200 244.640,-116.200" />
+<polygon fill="#3e5e4d" stroke="#3e5e4d" stroke-width="2" points="247.090,-116.200 244.640,-109.200 242.190,-116.200 247.090,-116.200" />
+<text xml:space="preserve" text-anchor="start" x="224.41" y="-139.36" font-family="Arial" font-size="11.00" fill="#3e5e4d">no</text>
+</g>
+
+<g id="node16" class="node">
+<title>end</title>
+<path fill="#e1eee5" stroke="#9bb5a5" stroke-width="2" d="M1131.6,-98.4C1131.6,-98.4 891.68,-98.4 891.68,-98.4 885.68,-98.4 879.68,-92.4 879.68,-86.4 879.68,-86.4 879.68,-52.8 879.68,-52.8 879.68,-46.8 885.68,-40.8 891.68,-40.8 891.68,-40.8 1131.6,-40.8 1131.6,-40.8 1137.6,-40.8 1143.6,-46.8 1143.6,-52.8 1143.6,-52.8 1143.6,-86.4 1143.6,-86.4 1143.6,-92.4 1137.6,-98.4 1131.6,-98.4" />
+<text xml:space="preserve" text-anchor="middle" x="1011.64" y="-74.1" font-family="Arial" font-size="15.00">End session</text>
+<text xml:space="preserve" text-anchor="middle" x="1011.64" y="-56.1" font-family="Arial" font-size="15.00">Submitted responses remain saved</text>
+</g>
+
+<g id="edge8" class="edge">
+<title>finished-&gt;end</title>
+<path fill="none" stroke="#3e5e4d" stroke-width="2" d="M512.642,-239.000C724.610,-239.000 1011.640,-239.000 1011.640,-239.000C1011.640,-239.000 1011.640,-105.400 1011.640,-105.400" />
+<polygon fill="#3e5e4d" stroke="#3e5e4d" stroke-width="2" points="1014.090,-105.400 1011.640,-98.400 1009.190,-105.400 1014.090,-105.400" />
+<text xml:space="preserve" text-anchor="start" x="803.67" y="-249.2" font-family="Arial" font-size="11.00" fill="#3e5e4d">yes</text>
+</g>
+
+<g id="edge11" class="edge">
+<title>pause_choice-&gt;schedule</title>
+<path fill="none" stroke="#3e5e4d" stroke-width="2" d="M95.601,-70.000C81.980,-70.000 75.920,-70.000 75.920,-70.000C75.920,-70.000 75.920,-916.000 75.920,-916.000C75.920,-916.000 140.900,-916.000 140.900,-916.000" />
+<polygon fill="#3e5e4d" stroke="#3e5e4d" stroke-width="2" points="140.900,-918.450 147.900,-916.000 140.900,-913.550 140.900,-918.450" />
+<text xml:space="preserve" text-anchor="start" x="8" y="-525.81" font-family="Arial" font-size="11.00" fill="#3e5e4d">no: next trial</text>
+</g>
+
+<g id="node15" class="node">
+<title>paused</title>
+<path fill="#fff5de" stroke="#cbb176" stroke-width="2" d="M752.59,-107.4C752.59,-107.4 522.69,-107.4 522.69,-107.4 516.69,-107.4 510.69,-101.4 510.69,-95.4 510.69,-95.4 510.69,-43.8 510.69,-43.8 510.69,-37.8 516.69,-31.8 522.69,-31.8 522.69,-31.8 752.59,-31.8 752.59,-31.8 758.59,-31.8 764.59,-37.8 764.59,-43.8 764.59,-43.8 764.59,-95.4 764.59,-95.4 764.59,-101.4 758.59,-107.4 752.59,-107.4" />
+<text xml:space="preserve" text-anchor="middle" x="637.64" y="-83.1" font-family="Arial" font-size="15.00">Paused</text>
+<text xml:space="preserve" text-anchor="middle" x="637.64" y="-65.1" font-family="Arial" font-size="15.00">Current answer already submitted</text>
+<text xml:space="preserve" text-anchor="middle" x="637.64" y="-47.1" font-family="Arial" font-size="15.00">Wait for user to resume</text>
+</g>
+
+<g id="edge10" class="edge">
+<title>pause_choice-&gt;paused</title>
+<path fill="none" stroke="#3e5e4d" stroke-width="2" d="M393.679,-70.000C397.430,-70.000 503.690,-70.000 503.690,-70.000" />
+<polygon fill="#3e5e4d" stroke="#3e5e4d" stroke-width="2" points="503.690,-72.450 510.690,-70.000 503.690,-67.550 503.690,-72.450" />
+<text xml:space="preserve" text-anchor="start" x="423.55" y="-80.2" font-family="Arial" font-size="11.00" fill="#3e5e4d">yes</text>
+</g>
+
+<g id="node9" class="node">
+<title>users</title>
+<path fill="#e8f0fa" stroke="#9eb6cf" stroke-width="2" d="M1433.97,-1287.97C1433.97,-1293.19 1379.59,-1297.42 1312.64,-1297.42 1245.7,-1297.42 1191.32,-1293.19 1191.32,-1287.97 1191.32,-1287.97 1191.32,-1202.92 1191.32,-1202.92 1191.32,-1197.71 1245.7,-1193.47 1312.64,-1193.47 1379.59,-1193.47 1433.97,-1197.71 1433.97,-1202.92 1433.97,-1202.92 1433.97,-1287.97 1433.97,-1287.97" />
+<path fill="none" stroke="#9eb6cf" stroke-width="2" d="M1433.97,-1287.97C1433.97,-1282.76 1379.59,-1278.53 1312.64,-1278.53 1245.7,-1278.53 1191.32,-1282.76 1191.32,-1287.97" />
+<text xml:space="preserve" text-anchor="middle" x="1312.64" y="-1258.95" font-family="Arial" font-size="15.00">User DB</text>
+<text xml:space="preserve" text-anchor="middle" x="1312.64" y="-1240.95" font-family="Arial" font-size="15.00">REGISTERED</text>
+<text xml:space="preserve" text-anchor="middle" x="1312.64" y="-1222.95" font-family="Arial" font-size="15.00">Participant ID + registered email</text>
+</g>
+
+<g id="edge14" class="edge">
+<title>users-&gt;auth</title>
+<path fill="none" stroke="#6a8bad" stroke-width="2" stroke-dasharray="5,2" d="M1191.320,-1286.000C1190.430,-1286.000 363.344,-1286.000 363.344,-1286.000" />
+<polygon fill="#6a8bad" stroke="#6a8bad" stroke-width="2" points="363.344,-1283.550 356.344,-1286.000 363.344,-1288.450 363.344,-1283.550" />
+<text xml:space="preserve" text-anchor="middle" x="696.42" y="-1302.5" font-family="Arial" font-size="11.00" fill="#4b6e92">registration result + participant IDs</text>
+<text xml:space="preserve" text-anchor="middle" x="696.42" y="-1289.3" font-family="Arial" font-size="11.00" fill="#4b6e92">lookup uses SHA256(email)</text>
+</g>
+
+<g id="node10" class="node">
+<title>assets</title>
+<polygon fill="#fff5de" stroke="#cbb176" stroke-width="2" points="1580.25,-1115.85 1577.25,-1119.85 1556.25,-1119.85 1553.25,-1115.85 1363.03,-1115.85 1363.03,-1040.25 1580.25,-1040.25 1580.25,-1115.85" />
+<text xml:space="preserve" text-anchor="middle" x="1471.64" y="-1091.55" font-family="Arial" font-size="15.00">Study assets</text>
+<text xml:space="preserve" text-anchor="middle" x="1471.64" y="-1073.55" font-family="Arial" font-size="15.00">Question JSON + video files</text>
+<text xml:space="preserve" text-anchor="middle" x="1471.64" y="-1055.55" font-family="Arial" font-size="15.00">Demo and main-trial content</text>
+</g>
+
+<g id="edge15" class="edge">
+<title>assets-&gt;demos</title>
+<path fill="none" stroke="#6a8bad" stroke-width="2" stroke-dasharray="5,2" d="M1363.030,-1091.000C1362.290,-1091.000 460.940,-1091.000 460.940,-1091.000" />
+<polygon fill="#6a8bad" stroke="#6a8bad" stroke-width="2" points="460.940,-1088.550 453.940,-1091.000 460.940,-1093.450 460.940,-1088.550" />
+<text xml:space="preserve" text-anchor="middle" x="856.25" y="-1094.3" font-family="Arial" font-size="11.00" fill="#4b6e92">demo prompts + videos</text>
+</g>
+
+<g id="edge18" class="edge">
+<title>assets-&gt;question</title>
+<path fill="none" stroke="#6a8bad" stroke-width="2" stroke-dasharray="5,2" d="M1488.250,-1040.250C1488.250,-953.660 1488.250,-755.000 1488.250,-755.000C1488.250,-755.000 439.690,-755.000 439.690,-755.000" />
+<polygon fill="#6a8bad" stroke="#6a8bad" stroke-width="2" points="439.690,-752.550 432.690,-755.000 439.690,-757.450 439.690,-752.550" />
+<text xml:space="preserve" text-anchor="middle" x="1062.39" y="-758.3" font-family="Arial" font-size="11.00" fill="#4b6e92">question + choices</text>
+</g>
+
+<g id="edge19" class="edge">
+<title>assets-&gt;video</title>
+<path fill="none" stroke="#6a8bad" stroke-width="2" stroke-dasharray="5,2" d="M1363.030,-1065.000C1166.580,-1065.000 776.670,-1065.000 776.670,-1065.000C776.670,-1065.000 776.670,-620.000 776.670,-620.000C776.670,-620.000 470.130,-620.000 470.130,-620.000" />
+<polygon fill="#6a8bad" stroke="#6a8bad" stroke-width="2" points="470.130,-617.550 463.130,-620.000 470.130,-622.450 470.130,-617.550" />
+<text xml:space="preserve" text-anchor="middle" x="739.68" y="-987.35" font-family="Arial" font-size="11.00" fill="#4b6e92">matching video</text>
+</g>
+
+<g id="edge16" class="edge">
+<title>questions-&gt;schedule</title>
+<path fill="none" stroke="#6a8bad" stroke-width="2" stroke-dasharray="5,2" d="M1187.210,-932.000C1186.220,-932.000 466.390,-932.000 466.390,-932.000" />
+<polygon fill="#6a8bad" stroke="#6a8bad" stroke-width="2" points="466.390,-929.550 459.390,-932.000 466.390,-934.450 466.390,-929.550" />
+<text xml:space="preserve" text-anchor="middle" x="766.8" y="-935.3" font-family="Arial" font-size="11.00" fill="#4b6e92">global response statistics</text>
+</g>
+
+<g id="edge23" class="edge">
+<title>tracker-&gt;gaze</title>
+<path fill="none" stroke="#6a8bad" stroke-width="2" stroke-dasharray="5,2" d="M1389.640,-569.100C1389.640,-568.250 1389.640,-504.068 1389.640,-504.068" />
+<polygon fill="#6a8bad" stroke="#6a8bad" stroke-width="2" points="1392.090,-504.068 1389.640,-497.068 1387.190,-504.068 1392.090,-504.068" />
+<text xml:space="preserve" text-anchor="middle" x="1337.67" y="-554.63" font-family="Arial" font-size="11.00" fill="#4b6e92">recorded gaze import</text>
+<text xml:space="preserve" text-anchor="middle" x="1337.67" y="-541.43" font-family="Arial" font-size="11.00" fill="#4b6e92">(separate pipeline)</text>
+</g>
+
+<g id="edge17" class="edge">
+<title>gaze-&gt;schedule</title>
+<path fill="none" stroke="#6a8bad" stroke-width="2" stroke-dasharray="5,2" d="M1239.200,-492.646C1239.200,-568.610 1239.200,-681.000 1239.200,-681.000C1239.200,-681.000 446.040,-681.000 446.040,-681.000C446.040,-681.000 446.040,-862.480 446.040,-862.480" />
+<polygon fill="#6a8bad" stroke="#6a8bad" stroke-width="2" points="443.590,-862.480 446.040,-869.480 448.490,-862.480 443.590,-862.480" />
+<text xml:space="preserve" text-anchor="middle" x="774.79" y="-684.3" font-family="Arial" font-size="11.00" fill="#4b6e92">user's answered question IDs</text>
+</g>
+
+<g id="edge12" class="edge">
+<title>paused-&gt;schedule</title>
+<path fill="none" stroke="#3e5e4d" stroke-width="2" d="M554.950,-107.400C554.950,-272.250 554.950,-901.000 554.950,-901.000C554.950,-901.000 466.390,-901.000 466.390,-901.000" />
+<polygon fill="#3e5e4d" stroke="#3e5e4d" stroke-width="2" points="466.390,-898.550 459.390,-901.000 466.390,-903.450 466.390,-898.550" />
+<text xml:space="preserve" text-anchor="start" x="462.59" y="-527.97" font-family="Arial" font-size="11.00" fill="#3e5e4d">resume: next trial</text>
+</g>
+
+<g id="edge13" class="edge">
+<title>paused-&gt;end</title>
+<path fill="none" stroke="#3e5e4d" stroke-width="2" d="M764.590,-70.000C765.570,-70.000 872.680,-70.000 872.680,-70.000" />
+<polygon fill="#3e5e4d" stroke="#3e5e4d" stroke-width="2" points="872.680,-72.450 879.680,-70.000 872.680,-67.550 872.680,-72.450" />
+<text xml:space="preserve" text-anchor="start" x="812.79" y="-52" font-family="Arial" font-size="10.00" fill="#3e5e4d">user ends /</text>
+<text xml:space="preserve" text-anchor="start" x="805.01" y="-40" font-family="Arial" font-size="10.00" fill="#3e5e4d">closes session</text>
+</g>
+</g>
+</svg>

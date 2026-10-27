@@ -1,0 +1,7 @@
+PyQt5==5.15.10
+mysql-connector-python==8.3.0
+numpy>=1.26,<2
+opencv-python==4.9.0.80
+pandas==2.2.1
+PyAutoGUI==0.9.54
+PyYAML==6.0.1

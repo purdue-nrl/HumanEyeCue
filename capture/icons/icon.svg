@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-c42e9593-4594-4b5a-8eef-358610eb50d3" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+  <defs>
+    <style>
+      .uuid-0e98c03c-b202-405f-ae19-6b1a56ae953f {
+        fill: none;
+      }
+
+      .uuid-0e98c03c-b202-405f-ae19-6b1a56ae953f, .uuid-6011c2c1-873e-48c7-8d02-a98f3e01ae8d, .uuid-4cc006fd-aaa3-4852-aed6-207946bdb7a0 {
+        stroke: #231f20;
+      }
+
+      .uuid-0e98c03c-b202-405f-ae19-6b1a56ae953f, .uuid-6011c2c1-873e-48c7-8d02-a98f3e01ae8d, .uuid-4cc006fd-aaa3-4852-aed6-207946bdb7a0, .uuid-dedec945-54af-4ad7-8769-09193ee0f231 {
+        stroke-miterlimit: 10;
+      }
+
+      .uuid-7457079f-0a92-46ab-9a34-33c408b2694e, .uuid-dd426309-d0ec-4ae3-9133-35392d94c2ba {
+        fill: #231f20;
+      }
+
+      .uuid-7457079f-0a92-46ab-9a34-33c408b2694e, .uuid-a96df459-1268-41d9-90d7-a15e8e6a934e {
+        stroke-width: 0px;
+      }
+
+      .uuid-6011c2c1-873e-48c7-8d02-a98f3e01ae8d {
+        fill: #27aae1;
+      }
+
+      .uuid-4cc006fd-aaa3-4852-aed6-207946bdb7a0, .uuid-a96df459-1268-41d9-90d7-a15e8e6a934e {
+        fill: #fff;
+      }
+
+      .uuid-dd426309-d0ec-4ae3-9133-35392d94c2ba {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 18px;
+      }
+
+      .uuid-dedec945-54af-4ad7-8769-09193ee0f231 {
+        fill: #e6e7e8;
+        stroke: #1c75bc;
+      }
+    </style>
+  </defs>
+  <rect class="uuid-dedec945-54af-4ad7-8769-09193ee0f231" x=".5" y=".5" width="55" height="55"/>
+  <circle class="uuid-6011c2c1-873e-48c7-8d02-a98f3e01ae8d" cx="28.65" cy="17.41" r="10"/>
+  <path class="uuid-0e98c03c-b202-405f-ae19-6b1a56ae953f" d="M7.31,20.95C21.5-3.22,36.62-1.54,49.69,22.07"/>
+  <circle class="uuid-a96df459-1268-41d9-90d7-a15e8e6a934e" cx="30.98" cy="12.11" r="2"/>
+  <circle class="uuid-7457079f-0a92-46ab-9a34-33c408b2694e" cx="28.65" cy="17.78" r="3"/>
+  <rect class="uuid-4cc006fd-aaa3-4852-aed6-207946bdb7a0" x="3.46" y="19.7" width="20.74" height="13.04"/>
+  <line class="uuid-0e98c03c-b202-405f-ae19-6b1a56ae953f" x1="3.46" y1="19.7" x2="27.76" y2="16.74"/>
+  <line class="uuid-0e98c03c-b202-405f-ae19-6b1a56ae953f" x1="24.2" y1="32.74" x2="30.13" y2="17.33"/>
+  <text class="uuid-dd426309-d0ec-4ae3-9133-35392d94c2ba" transform="translate(14.41 49.27)"><tspan x="0" y="0">NRL</tspan></text>
+</svg>

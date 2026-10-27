@@ -1,0 +1,37 @@
+# Local settings and credentials; keep the public configuration template.
+/config.json
+/.env
+/.env.*
+!/.env.example
+
+# Participant records, recordings and database storage.
+/sessions/
+/private/
+/data/
+/database/
+/mysql_data/
+/logs/
+*.csv
+*.xls
+*.xlsx
+*.parquet
+*.sqlite
+*.sqlite3
+*.db
+*.log
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wmv
+*.prj
+
+# Python environments, caches and packaged builds.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+/build/
+/dist/
+.DS_Store
+Thumbs.db

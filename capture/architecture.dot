@@ -1,0 +1,86 @@
+// High-level flow. The source builds the schedule at login, then consumes it.
+// Session/time-limit termination is conceptual; no automatic timer is implemented.
+// Render: dot -Tsvg architecture.dot -o architecture.svg
+digraph HumanEyeCueCapture {
+  graph [rankdir=TB, newrank=true, compound=true, bgcolor="white",
+    fontname="Arial", fontsize=24, pad="0.3", nodesep="1.6", ranksep="1.0",
+    splines=ortho, forcelabels=true, labelloc=t, label="HumanEyeCue | Capture flow and data interactions\n"];
+  node [shape=box, style="rounded,filled", fillcolor="#f0f5f1", color="#9bb5a5", penwidth=2,
+    fontname="Arial", fontsize=15, margin="0.2,0.15"];
+  edge [fontname="Arial", fontsize=11, color="#3e5e4d", fontcolor="#3e5e4d",
+    arrowsize=0.7, penwidth=2, headclip=true, tailclip=true];
+
+  // Align the main sequence and external-data lanes. Let Graphviz clip edges
+  // to the actual shape; explicit compass ports misclip orthogonal diamonds.
+  auth, demos, schedule, question, video, response, finished, pause_choice [group="flow"];
+  users, assets [group="inputs"];
+  questions, tracker, gaze [group="stores"];
+
+  // Logical data roles; the database tables share one MySQL service.
+  subgraph cluster_private_users {
+    label="Kept private (PII data)\nNot included in the released dataset";
+    labelloc=t; fontsize=14; fontcolor="#854b4b";
+    color="#c99b9b"; fillcolor="#fff7f7"; style="rounded,filled";
+    penwidth=1.5; margin=18;
+    users [shape=cylinder, fillcolor="#e8f0fa", color="#9eb6cf",
+      label="User DB\nREGISTERED\nParticipant ID + registered email"];
+  }
+  assets [shape=folder, fillcolor="#fff5de", color="#cbb176",
+    label="Study assets\nQuestion JSON + video files\nDemo and main-trial content"];
+  questions [shape=cylinder, fillcolor="#e8f0fa", color="#9eb6cf",
+    label="Question DB / response pool\nVQDB.VQ_DATA\nQuestion IDs + global response counts"];
+  gaze [shape=cylinder, fillcolor="#e8f0fa", color="#9eb6cf",
+    label="Gaze / session DB\nEYE_TRACK_DB\nQVA_SESSION_DATA: answers + phase timing\nEYE_TRACKING_DATA: imported gaze"];
+  tracker [fillcolor="#fff5de", color="#cbb176",
+    label="Eye tracker / Gazepoint\nRecords gaze during viewing\nSeparate import into gaze DB"];
+
+  subgraph cluster_app {
+    label="Capture application"; labelloc=t; fontsize=18;
+    color="#c3d3c9"; style="rounded"; margin=22;
+    auth [shape=diamond, style=filled, fillcolor="#e1eee5", label="1. Start\nIs the user registered?"];
+    blocked [fillcolor="#f8eeee", color="#d4b7b7", label="Stay on welcome screen\nRegistration required"];
+    demos [label="2. Familiarize the user\nThree demo question-video-answer trials\nConfirm ready to start"];
+    schedule [fillcolor="#e1eee5", label="3. Scheduling / next question\nPrioritize least-answered questions\nExclude this user's answered pairs\nRespect spacing between repeated videos"];
+    question [label="4. Present question\nShow prompt + answer choices\nRecord question-phase start / stop"];
+    video [label="5. Play video once\nRecord video-phase start / stop\nAdvance automatically when playback ends"];
+    response [label="6. Collect and save response\nSave answer + question/video/answer timing\nIncrement global question response count"];
+    finished [shape=diamond, style=filled, fillcolor="#e1eee5", label="Session limit / user ends\nOR question limit reached?"];
+    pause_choice [shape=diamond, style=filled, fillcolor="#e1eee5", label="Pause requested?"];
+    paused [fillcolor="#fff5de", color="#cbb176", label="Paused\nCurrent answer already submitted\nWait for user to resume"];
+    end [fillcolor="#e1eee5", label="End session\nSubmitted responses remain saved"];
+    auth -> demos [xlabel=<<TABLE BORDER="0" CELLBORDER="0" CELLPADDING="6"><TR><TD>yes</TD></TR></TABLE>>];
+    auth -> blocked [xlabel=<<TABLE BORDER="0" CELLBORDER="0" CELLPADDING="6"><TR><TD>no</TD></TR></TABLE>>];
+    demos -> schedule [xlabel=<<TABLE BORDER="0" CELLBORDER="0" CELLPADDING="6"><TR><TD>start main trials</TD></TR></TABLE>>];
+    schedule -> question;
+    question -> video [xlabel=<<TABLE BORDER="0" CELLBORDER="0" CELLPADDING="6"><TR><TD>Next</TD></TR></TABLE>>];
+    video -> response [xlabel=<<TABLE BORDER="0" CELLBORDER="0" CELLPADDING="6"><TR><TD>playback ends</TD></TR></TABLE>>];
+    response -> finished [xlabel=<<TABLE BORDER="0" CELLBORDER="0" CELLPADDING="6"><TR><TD>Next / Pause and submit</TD></TR></TABLE>>];
+    finished -> end [xlabel=<<TABLE BORDER="0" CELLBORDER="0" CELLPADDING="6"><TR><TD>yes</TD></TR></TABLE>>];
+    finished -> pause_choice [xlabel=<<TABLE BORDER="0" CELLBORDER="0" CELLPADDING="6"><TR><TD>no</TD></TR></TABLE>>];
+    pause_choice -> paused [xlabel=<<TABLE BORDER="0" CELLBORDER="0" CELLPADDING="6"><TR><TD>yes</TD></TR></TABLE>>];
+    pause_choice -> schedule [xlabel=<<TABLE BORDER="0" CELLBORDER="0" CELLPADDING="6"><TR><TD>no: next trial</TD></TR></TABLE>>, constraint=false];
+    paused -> schedule [xlabel=<<TABLE BORDER="0" CELLBORDER="0" CELLPADDING="6"><TR><TD>resume: next trial</TD></TR></TABLE>>, constraint=false];
+    paused -> end [xlabel=<<TABLE BORDER="0" CELLBORDER="0" CELLPADDING="6"><TR><TD>user ends /<BR/>closes session</TD></TR></TABLE>>, fontsize=10, constraint=false];
+  }
+
+  {rank=same; auth; users; blocked;}
+  {rank=same; demos; assets;}
+  {rank=same; schedule; questions;}
+  {rank=same; response; gaze;}
+  {rank=same; video; tracker;}
+  {rank=same; pause_choice; paused;}
+
+  // Dashed arrows show data or signals, not SQL request direction.
+  // Reads flow FROM assets/stores TO the app; writes flow FROM the app TO stores.
+  edge [style=dashed, color="#6a8bad", fontcolor="#4b6e92", constraint=false];
+  users -> auth [xlabel="registration result + participant IDs\nlookup uses SHA256(email)"];
+  assets -> demos [xlabel="demo prompts + videos"];
+  questions -> schedule [xlabel="global response statistics"];
+  gaze -> schedule [xlabel="user's answered question IDs"];
+  assets -> question [xlabel="question + choices"];
+  assets -> video [xlabel="matching video"];
+  video -> tracker [xlabel="phase-sync signals"];
+  response -> gaze [xlabel="save response + phase times / ticks"];
+  response -> questions [xlabel="update num_responses += 1"];
+  tracker -> gaze [xlabel="recorded gaze import\n(separate pipeline)"];
+}
